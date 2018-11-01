@@ -6,17 +6,34 @@
 
 .soft-bounce {
 
- /* Safari 4.0 - 8.0 */
-    -webkit-animation-name: example;
-    -webkit-animation-duration: 3s;
-    -webkit-animation-iteration-count: infinite;
-    -webkit-animation-direction: alternate;
+animation-name: bob;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-direction: alternate;
+animation-timing-function: ease-in;
+}
 
-    animation-name: bob;
-    animation-duration: 3s;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-    animation-timing-function: ease-in;
+.slow-drift {
+  animation-name: drift;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+.orbit-front {
+  animation-name: orbit-disappear;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+.orbit-back {
+  animation-name: orbit;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
 }
 
 #word1 {
@@ -33,13 +50,34 @@
 #word2 {
   font-family: Roboto;
   animation-delay: .3s;
-  font-size: 700%;
+  font-size: 450%;
   color: #fff;
+  text-shadow: 3px 3px 3px #000000;
   position: absolute;
-  bottom: 15%;
+  bottom: 10%;
   left: 70%;
   z-index: 0;
   margin: 0;
+}
+
+#word3 {
+  width: 50%;
+  font-family: Roboto;
+  animation-delay: .3s;
+  font-size: 500%;
+  color: #fff;
+  text-shadow: 3px 3px 3px #000000;
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  z-index: 0;
+  margin: 0;
+}
+
+.floaty-link {
+  animation-name: bob;
+  text-decoration: none;
+  color: inherit;
 }
 
 #star1 {
@@ -107,6 +145,111 @@
   fill: #004665;
 }
 
+.moon {
+  cx: 85%;
+  cy: 15%;
+  r: 7%;
+  fill: #007569;
+}
+
+#sub-moon-front {
+  cx: 78%;
+  cy: 25%;
+  r: 2%;
+  fill: #28434e;
+}
+
+#sub-moon-back {
+  cx: 78%;
+  cy: 25%;
+  r: 2%;
+  fill: #28434e;
+}
+
+#cloud1 {
+  x: 12%;
+  y: 70%;
+  height: 50px;
+  width: 160px;
+  rx: 25px;
+  ry: 50px;
+  fill: white;
+}
+#shadow1 {
+  x: 12%;
+  y: 80%;
+  height: 50px;
+  width: 160px;
+  rx: 25px;
+  ry: 50px;
+  fill: #01344a;
+}
+
+#cloud2 {
+  animation-delay: .3s;
+  x: 20%;
+  y: 80%;
+  height: 50px;
+  width: 160px;
+  rx: 25px;
+  ry: 50px;
+  fill: white;
+}
+#shadow2 {
+  animation-delay: .3s;
+  x: 20%;
+  y: 90%;
+  height: 50px;
+  width: 160px;
+  rx: 25px;
+  ry: 50px;
+  fill: #01344a;
+}
+
+#cloud3 {
+  animation-delay: 1.7s;
+  x: 60%;
+  y: 65%;
+  height: 50px;
+  width: 160px;
+  rx: 25px;
+  ry: 50px;
+  fill: white;
+}
+#shadow3 {
+  animation-delay: 1.7s;
+  x: 60%;
+  y: 75%;
+  height: 50px;
+  width: 160px;
+  rx: 25px;
+  ry: 50px;
+  fill: #01344a;
+}
+
+#cloud4 {
+  animation-delay: 1.5s;
+  x: 80%;
+  y: 85%;
+  height: 50px;
+  width: 160px;
+  rx: 25px;
+  ry: 50px;
+  fill: white;
+}
+#shadow4 {
+  animation-delay: 1.5s;
+  x: 80%;
+  y: 95%;
+  height: 50px;
+  width: 160px;
+  rx: 25px;
+  ry: 50px;
+  fill: #01344a;
+}
+
+
+
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes bob {
   0%   {  top:0px;}
@@ -117,4 +260,38 @@
 @keyframes bob {
   0%   {  -webkit-transform:translateY(0px);}
   100% {  -webkit-transform:translateY(30px);}
+}
+
+@keyframes drift {
+  0%   {  -webkit-transform:translateX(0px);}
+  100% {  -webkit-transform:translateX(50px);}
+}
+
+@keyframes orbit-disappear {
+  from {
+    -webkit-transform:translate(0px, 0px);
+    visibility:visible;
+  }
+ 50% {
+    -webkit-transform:translate(15%, -20%);
+    visibility:hidden;
+  }
+ to {
+
+    visibility:hidden;
+  }
+}
+
+@keyframes orbit {
+  from {
+    -webkit-transform:translate(0px, 0px);
+    visibility:visible;
+  }
+ 50% {
+   -webkit-transform:translate(15%, -20%);
+    visibility:visible;
+  }
+ to {
+    visibility:visible;
+  }
 }
