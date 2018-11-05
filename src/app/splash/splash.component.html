@@ -1,11 +1,22 @@
 <div class="container">
   <h1  id="word1">Kevin Suarez</h1>
-  <h2  id="word2">
-    Here's a <a class="floaty-link" href="https://docs.google.com/document/d/1aCtvUHg1tiXJcKtDVoSlsUGqZJdhTvBqpNlznNOvJSM/edit?usp=sharing" target="_blank">resume</a>, <br> and some contact info
-  </h2>
-  <h3 id="word3">
+
+  <h3 id="word2" class="words">
     is an artist, traveler, and developer
   </h3>
+
+  <h2  id="word3" class="words">
+    <a class="floaty-link" href="https://docs.google.com/document/d/1aCtvUHg1tiXJcKtDVoSlsUGqZJdhTvBqpNlznNOvJSM/edit?usp=sharing" target="_blank">Resume</a>
+  </h2>
+
+  <h2 id="word4" class="words">
+    <a class="floaty-link" href="#" (click)="toggleHole()">Contact Info</a>
+  </h2>
+
+  <h2 id="word5" class="words">
+    <a class="floaty-link" href="https://github.com/kjsuarez">Github</a>
+  </h2>
+
   <img src="assets/sparkle-big.png" alt="star"  class="soft-bounce" id="star1">
   <img src="assets/sparkle-med.png" alt="star"  class="soft-bounce" id="star2">
   <img src="assets/sparkle-small.png" alt="star"  class="soft-bounce" id="star3">
@@ -33,4 +44,14 @@
   </svg>
 
 
+</div>
+
+<div [ngClass]="{'black-hole': true, 'close': hole_is_closed}" >
+  <h2 id="hole-text">
+    kjsuarez94@gmail.com
+    <br>
+    +1 (773) 5595354
+    <br>
+
+  </h2>
 </div>

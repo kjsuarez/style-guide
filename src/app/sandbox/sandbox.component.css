@@ -1,26 +1,30 @@
-.jquery-div {
-  background-color: red;
-  position: relative;
-  height: 105px;
-  width: 260px;
+.black-hole {
+	border-radius:50%;
+	background-color: red;
+	color: white;
+	width: 500px;
+	height: 500px;
+	text-align: center;
+
+	animation: grow 1s alternate infinite;
+  -webkit-animation: grow 1s alternate infinite;
+  -moz-animation: grow 1s alternate infinite;
 }
 
-
-
-
-body, html {
-  height: 100%;
-  margin: 0;
-}
-.sky {
-  background: #91bbfc;
-  color: white;
-  height: 100%;
-  padding-top: 10%;
-  font-size: 500%;
-  text-align: center;
+#zoop{
+	margin-top: 50%;
 }
 
-.random {
+@keyframes grow {
+  0%   {
+		-webkit-transform: scale(0);
+    -ms-transform: scale(0);
+    transform: scale(0);
+	}
 
+  100% {
+		-webkit-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
 }
