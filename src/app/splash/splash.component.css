@@ -23,6 +23,44 @@ animation-timing-function: ease-in;
   animation-timing-function: ease-in-out;
 }
 
+.tiny-drift {
+  animation-name: tinydrift;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in-out;
+}
+
+#moon-cloud1 {
+  x: 83%;
+  y: 14%;
+  height: 10px;
+  width: 32px;
+  rx: 5px;
+  ry: 10px;
+  fill: white;
+}
+
+#moon-cloud2 {
+  x: 87%;
+  y: 21%;
+  height: 10px;
+  width: 32px;
+  rx: 5px;
+  ry: 10px;
+  fill: white;
+}
+
+#moon-cloud3 {
+  x: 86%;
+  y: 8%;
+  height: 10px;
+  width: 32px;
+  rx: 5px;
+  ry: 10px;
+  fill: white;
+}
+
 .orbit-front {
   animation-name: orbit-disappear;
   animation-duration: 5s;
@@ -300,6 +338,11 @@ animation-timing-function: ease-in;
   100% {  -webkit-transform:translateX(50px);}
 }
 
+@keyframes tinydrift {
+  0%   {  -webkit-transform:translateX(0px);}
+  100% {  -webkit-transform:translateX(5px);}
+}
+
 @keyframes orbit-disappear {
   from {
     -webkit-transform:translate(0px, 0px);
@@ -343,7 +386,7 @@ animation-timing-function: ease-in;
   right: 0;
   z-index: 2;
 
-  transition: transform 3s;
+  transition: transform 1s;
 
 	/* animation: shrink 1s alternate ;
   -webkit-animation: shrink 1s alternate ;
@@ -386,4 +429,101 @@ animation-timing-function: ease-in;
 		-ms-transform: scale(0);
 		transform: scale(0);
 	}
+}
+
+.tiny-star {
+  position: absolute;
+  z-index: 1;
+  width: .25%;
+  height: .5%;
+}
+
+#tiny-star-1 {
+  top: 60%;
+  left: 20%;
+}
+
+#tiny-star-2 {
+  top: 40%;
+  right: 25%;
+}
+
+#tiny-star-3 {
+  top: 80%;
+  left: 5%;
+}
+
+#tiny-star-4 {
+  top: 50%;
+  right: 50%;
+}
+
+#tiny-star-5 {
+  top: 10%;
+  right: 27%;
+}
+
+#tiny-star-6 {
+  top: 25%;
+  left: 17%;
+}
+
+#tiny-star-7 {
+  top: 60%;
+  right: 7%;
+}
+
+#tiny-star-8 {
+  top: 35%;
+  right: 28%;
+}
+
+#tiny-star-9 {
+  top: 37%;
+  right: 20%;
+}
+
+#tiny-star-11 {
+  top: 60%;
+  left: 10%;
+}
+
+#tiny-star-12 {
+  top: 55%;
+  left: 5%;
+}
+
+#tiny-star-13 {
+  top: 7%;
+  left: 58%;
+}
+
+#tiny-star-14 {
+  top: 29%;
+  left: 60%;
+}
+
+#tiny-star-15 {
+  top: 82%;
+  left: 96%;
+}
+
+#tiny-star-16 {
+  top: 47%;
+  left: 57%;
+}
+
+#tiny-star-17 {
+  top: 5%;
+  left: 22%;
+}
+
+#tiny-star-18 {
+  top: 22%;
+  left: 42%;
+}
+
+#tiny-star-19 {
+  top: 26%;
+  left: 38%;
 }

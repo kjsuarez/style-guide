@@ -14,7 +14,7 @@
   </h2>
 
   <h2 id="word5" class="words">
-    <a class="floaty-link" href="https://github.com/kjsuarez">Github</a>
+    <a class="floaty-link" href="https://github.com/kjsuarez" target="_blank">Github</a>
   </h2>
 
   <img src="assets/sparkle-big.png" alt="star"  class="soft-bounce" id="star1">
@@ -24,9 +24,32 @@
   <img src="assets/sparkle-med.png" alt="star"  class="soft-bounce" id="star5">
   <img src="assets/sparkle-small.png" alt="star"  class="soft-bounce" id="star6">
 
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-1">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-2">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-3">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-4">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-5">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-6">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-7">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-8">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-9">
+
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-11">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-12">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-13">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-14">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-15">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-16">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-17">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-18">
+  <img src="assets/ball.jpg" alt="star"  class="tiny-star" id="tiny-star-19">
+
   <svg width="100%" height="100%">
     <circle class="orbit-back" id="sub-moon-back"/>
     <circle class="moon"/>
+    <!-- <rect class="tiny-drift" id="moon-cloud1"/>
+    <rect class="tiny-drift" id="moon-cloud2"/>
+    <rect class="tiny-drift" id="moon-cloud3"/> -->
     <circle class="orbit-front" id="sub-moon-front"/>
     <circle class="world"/>
 
@@ -46,7 +69,7 @@
 
 </div>
 
-<div [ngClass]="{'black-hole': true, 'close': hole_is_closed}" >
+<div (click)="toggleHole()" [ngClass]="{'black-hole': true, 'close': hole_is_closed}" >
   <h2 id="hole-text">
     kjsuarez94@gmail.com
     <br>
