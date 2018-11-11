@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 @Component({
   selector: 'splash',
   templateUrl: './splash.component.html',
-  styleUrls: ['./splash.component.css']
+  styleUrls: ['./splash.component.css', './mobile-splash.component.css']
 })
 
 export class SplashComponent {

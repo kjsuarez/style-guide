@@ -1,0 +1,505 @@
+@media only screen and (max-aspect-ratio:	10/12) {
+
+
+  .container {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+  }
+
+
+  .soft-bounce {
+
+  animation-name: bob;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+  animation-timing-function: ease-in;
+  }
+
+  .slow-drift {
+    animation-name: drift;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+
+  .tiny-drift {
+    animation-name: tinydrift;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+
+
+  .orbit-front {
+    animation-name: orbit-disappear;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+
+  .orbit-back {
+    animation-name: orbit;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+
+  #word1 {
+    font-family: Roboto;
+    font-size: 220%;
+    color: #fff;
+    position: absolute;
+    bottom: 90%;
+    left: 5%;
+    z-index: 0;
+    margin: 0;
+  }
+
+  .words {
+    font-family: Roboto;
+    font-size: 200%;
+    overflow: hidden;
+    color: #fff;
+    text-shadow: 3px 3px 3px #000000;
+    position: fixed;
+    z-index: 0;
+    margin: 0;
+  }
+
+  #word3 {
+    bottom: 42%;
+    left: 55%;
+
+    animation-timing-function: ease-in-out;
+    animation: bob 3s alternate infinite;
+    -webkit-animation: bob 3s alternate infinite;
+    -moz-animation: bob 3s alternate infinite;
+    animation-delay: 0s;
+  }
+
+  #word4 {
+    bottom: 30%;
+    left: 50%;
+
+
+    animation-timing-function: ease-in-out;
+    animation: bob 2s alternate infinite;
+    -webkit-animation: bob 2s alternate infinite;
+    -moz-animation: bob 2s alternate infinite;
+    animation-delay: .5s;
+  }
+
+  #word5 {
+    bottom: 20%;
+    left: 55%;
+
+    animation-timing-function: ease-in-out;
+    animation: bob 2s alternate infinite;
+    -webkit-animation: bob 2s alternate infinite;
+    -moz-animation: bob 2s alternate infinite;
+    animation-delay: 1s;
+  }
+
+  #word2 {
+    width: 50%;
+    font-family: Roboto;
+    animation-delay: .3s;
+    font-size: 170%;
+    color: #fff;
+    text-shadow: 3px 3px 3px #000000;
+    position: absolute;
+    top: 15%;
+    left: 5%;
+    z-index: 0;
+    margin: 0;
+  }
+
+  .floaty-link {
+    animation-name: bob;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  #star1 {
+    animation-delay: .5s;
+    position: absolute;
+    bottom: 15%;
+    left: 20%;
+    width: 10%;
+    height: 10%;
+    z-index: 1;
+  }
+
+  #star2 {
+    animation-delay: .2s;
+    position: absolute;
+    bottom: 14%;
+    left: 15%;
+    width: 6%;
+    height: 6%;
+    z-index: 1;
+  }
+  #star3 {
+    animation-delay: .4s;
+    position: absolute;
+    bottom: 10%;
+    left: 20%;
+    width: 4%;
+    height: 4%;
+    z-index: 1;
+  }
+
+  #star4 {
+    animation-delay: .5s;
+    position: absolute;
+    top: 15%;
+    right: 20%;
+    width: 10%;
+    height: 10%;
+    z-index: 1;
+  }
+
+  #star5 {
+    animation-delay: .2s;
+    position: absolute;
+    top: 14%;
+    right: 15%;
+    width: 6%;
+    height: 6%;
+    z-index: 1;
+  }
+  #star6 {
+    animation-delay: .4s;
+    position: absolute;
+    top: 10%;
+    right: 20%;
+    width: 4%;
+    height: 4%;
+    z-index: 1;
+  }
+
+  .world {
+    cx: 50%;
+    cy: 130%;
+    r: 87%;
+    fill: #004665;
+  }
+
+  .moon {
+    cx: 85%;
+    cy: 15%;
+    r: 7%;
+    fill: #007569;
+  }
+
+  #sub-moon-front {
+    cx: 78%;
+    cy: 25%;
+    r: 2%;
+    fill: #28434e;
+  }
+
+  #sub-moon-back {
+    cx: 78%;
+    cy: 25%;
+    r: 2%;
+    fill: #28434e;
+  }
+
+  #cloud1 {
+    x: 12%;
+    y: 70%;
+    height: 4%;
+    width: 16%;
+    rx: 2.5%;
+    ry: 5%;
+    fill: white;
+  }
+  #shadow1 {
+    x: 12%;
+    y: 80%;
+    height: 4%;
+    width: 16%;
+    rx: 2.5%;
+    ry: 5%;
+    fill: #01344a;
+  }
+
+  #cloud2 {
+    animation-delay: .3s;
+    x: 20%;
+    y: 80%;
+    height: 4%;
+    width: 16%;
+    rx: 2.5%;
+    ry: 5%;
+    fill: white;
+  }
+  #shadow2 {
+    animation-delay: .3s;
+    x: 20%;
+    y: 90%;
+    height: 4%;
+    width: 16%;
+    rx: 2.5%;
+    ry: 5%;
+    fill: #01344a;
+  }
+
+  #cloud3 {
+    animation-delay: 1.7s;
+    x: 60%;
+    y: 65%;
+    height: 4%;
+    width: 16%;
+    rx: 2.5%;
+    ry: 5%;
+    fill: white;
+  }
+  #shadow3 {
+    animation-delay: 1.7s;
+    x: 60%;
+    y: 75%;
+    height: 4%;
+    width: 16%;
+    rx: 2.5%;
+    ry: 5%;
+    fill: #01344a;
+  }
+
+  #cloud4 {
+    animation-delay: 1.5s;
+    x: 80%;
+    y: 85%;
+    height: 4%;
+    width: 16%;
+    rx: 2.5%;
+    ry: 5%;
+    fill: white;
+  }
+  #shadow4 {
+    animation-delay: 1.5s;
+    x: 80%;
+    y: 95%;
+    height: 4%;
+    width: 16%;
+    rx: 2.5%;
+    ry: 5%;
+    fill: #01344a;
+  }
+
+
+
+  /* Safari 4.0 - 8.0 */
+  @-webkit-keyframes bob {
+    0%   {  top:0%;}
+    100% {  top:25%;}
+  }
+
+  /* Standard syntax */
+  @keyframes bob {
+    0%   {  -webkit-transform:translateY(0%);}
+    100% {  -webkit-transform:translateY(25%);}
+  }
+
+  @keyframes drift {
+    0%   {  -webkit-transform:translateX(0px);}
+    100% {  -webkit-transform:translateX(50px);}
+  }
+
+  @keyframes tinydrift {
+    0%   {  -webkit-transform:translateX(0px);}
+    100% {  -webkit-transform:translateX(5px);}
+  }
+
+  @keyframes orbit-disappear {
+    from {
+      -webkit-transform:translate(0px, 0px);
+      visibility:visible;
+    }
+   50% {
+      -webkit-transform:translate(15%, -20%);
+      visibility:hidden;
+    }
+   to {
+
+      visibility:hidden;
+    }
+  }
+
+  @keyframes orbit {
+    from {
+      -webkit-transform:translate(0px, 0px);
+      visibility:visible;
+    }
+   50% {
+     -webkit-transform:translate(15%, -20%);
+      visibility:visible;
+    }
+   to {
+      visibility:visible;
+    }
+  }
+
+  .black-hole {
+  	border-radius:50%;
+  	background-color: black;
+  	color: white;
+  	width: 200px;
+  	height: 200px;
+  	text-align: center;
+
+    position: fixed;
+    top: 20%;
+    left: 26%;
+    right: 0;
+    z-index: 2;
+
+    transition: transform 1s;
+
+  	/* animation: shrink 1s alternate ;
+    -webkit-animation: shrink 1s alternate ;
+    -moz-animation: shrink 1s alternate ; */
+  }
+
+  .black-hole.close {
+    transform: scale(0);
+  }
+
+  #hole-text {
+    font-family: Roboto;
+    padding-top: 35%;
+    font-size: 100%;
+  }
+
+  @keyframes grow {
+    0%   {
+  		-webkit-transform: scale(0);
+      -ms-transform: scale(0);
+      transform: scale(0);
+  	}
+
+    100% {
+  		-webkit-transform: scale(1);
+  		-ms-transform: scale(1);
+  		transform: scale(1);
+  	}
+  }
+
+  @keyframes shrink {
+    0%   {
+  		-webkit-transform: scale(1);
+      -ms-transform: scale(1);
+      transform: scale(1);
+  	}
+
+    100% {
+  		-webkit-transform: scale(0);
+  		-ms-transform: scale(0);
+  		transform: scale(0);
+  	}
+  }
+
+  .tiny-star {
+    position: absolute;
+    z-index: 1;
+    width: .25%;
+    height: .25%;
+  }
+
+  #tiny-star-1 {
+    top: 60%;
+    left: 20%;
+  }
+
+  #tiny-star-2 {
+    top: 40%;
+    right: 25%;
+  }
+
+  #tiny-star-3 {
+    top: 80%;
+    left: 5%;
+  }
+
+  #tiny-star-4 {
+    top: 50%;
+    right: 50%;
+  }
+
+  #tiny-star-5 {
+    top: 10%;
+    right: 27%;
+  }
+
+  #tiny-star-6 {
+    top: 25%;
+    left: 17%;
+  }
+
+  #tiny-star-7 {
+    top: 60%;
+    right: 7%;
+  }
+
+  #tiny-star-8 {
+    top: 35%;
+    right: 28%;
+  }
+
+  #tiny-star-9 {
+    top: 37%;
+    right: 20%;
+  }
+
+  #tiny-star-11 {
+    top: 60%;
+    left: 10%;
+  }
+
+  #tiny-star-12 {
+    top: 55%;
+    left: 5%;
+  }
+
+  #tiny-star-13 {
+    top: 7%;
+    left: 58%;
+  }
+
+  #tiny-star-14 {
+    top: 29%;
+    left: 60%;
+  }
+
+  #tiny-star-15 {
+    top: 82%;
+    left: 96%;
+  }
+
+  #tiny-star-16 {
+    top: 47%;
+    left: 57%;
+  }
+
+  #tiny-star-17 {
+    top: 5%;
+    left: 22%;
+  }
+
+  #tiny-star-18 {
+    top: 22%;
+    left: 42%;
+  }
+
+  #tiny-star-19 {
+    top: 26%;
+    left: 38%;
+  }
+
+}
