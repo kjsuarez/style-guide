@@ -1,5 +1,3 @@
-
-
 .container {
   height: 100%;
   width: 100%;
@@ -21,6 +19,23 @@ animation-timing-function: ease-in;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
+  transition: transform 2s;
+}
+
+.slow-drift.hide {
+  animation: none;
+  transform: translate(0%, 100%)
+  /* animation-name: hide-down;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  transition: transform 2s; */
+}
+
+.soft-bounce.hide {
+  animation: none;
+  transform: translate(0%, 1000%)
 }
 
 .tiny-drift {
@@ -31,41 +46,31 @@ animation-timing-function: ease-in;
   animation-timing-function: ease-in-out;
 }
 
-#moon-cloud1 {
-  x: 83%;
-  y: 14%;
-  height: 10px;
-  width: 32px;
-  rx: 5px;
-  ry: 10px;
-  fill: white;
-}
 
-#moon-cloud2 {
-  x: 87%;
-  y: 21%;
-  height: 10px;
-  width: 32px;
-  rx: 5px;
-  ry: 10px;
-  fill: white;
-}
-
-#moon-cloud3 {
-  x: 86%;
-  y: 8%;
-  height: 10px;
-  width: 32px;
-  rx: 5px;
-  ry: 10px;
-  fill: white;
-}
 
 .orbit-front {
   animation-name: orbit-disappear;
   animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+
+}
+
+.orbit-front.full {
+  animation-name: orbit-disappear-close;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+}
+
+.orbit-back.full {
+  animation-name: orbit-close;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+
+
 }
 
 .orbit-back {
@@ -74,9 +79,10 @@ animation-timing-function: ease-in;
   animation-iteration-count: infinite;
   animation-direction: alternate;
   animation-timing-function: ease-in-out;
+
 }
 
-#word1 {
+.word1 {
   font-family: Roboto;
   font-size: 1000%;
   color: #fff;
@@ -85,6 +91,11 @@ animation-timing-function: ease-in;
   left: 5%;
   z-index: 0;
   margin: 0;
+  transition: transform 2s;
+}
+
+.word1.rise {
+  transform: translate(0%, -100%)
 }
 
 .words {
@@ -95,7 +106,10 @@ animation-timing-function: ease-in;
   position: absolute;
   z-index: 0;
   margin: 0;
+  transition: transform 2s;
 }
+
+
 
 #word3 {
   bottom: 42%;
@@ -143,6 +157,14 @@ animation-timing-function: ease-in;
   left: 5%;
   z-index: 0;
   margin: 0;
+}
+
+.words.hang-right {
+  transform: translate(200%, 0%)
+}
+
+.words.hang-left {
+  transform: translate(-200%, 0%)
 }
 
 .floaty-link {
@@ -214,13 +236,26 @@ animation-timing-function: ease-in;
   cy: 185%;
   r: 87%;
   fill: #004665;
+  transition: transform 2s;
 }
+
+.world.fall {
+  transform: translate(0%, 100%)
+}
+
+
 
 .moon {
   cx: 85%;
   cy: 15%;
   r: 7%;
   fill: #007569;
+  transition: transform 2s;
+}
+
+.moon.full {
+  transform: translate(-250%, 0%) scale(3.5);
+
 }
 
 #sub-moon-front {
@@ -312,6 +347,18 @@ animation-timing-function: ease-in;
 }
 
 
+.moon-text{
+  font-family: Roboto;
+  font-size: 90%;
+  visibility: hidden;
+  transition: transform 2s;
+}
+
+.moon-text.close-up {
+  visibility: visible;
+  transform: translate(-250%, 0%) scale(3.5);
+}
+
 
 /* Safari 4.0 - 8.0 */
 @-webkit-keyframes bob {
@@ -335,6 +382,13 @@ animation-timing-function: ease-in;
   100% {  -webkit-transform:translateX(5px);}
 }
 
+@keyframes hide-down {
+  0%   {  -webkit-transform:translate(0%, 0%);}
+  100% {  -webkit-transform:translate(0%, 100%);}
+}
+
+
+
 @keyframes orbit-disappear {
   from {
     -webkit-transform:translate(0px, 0px);
@@ -350,6 +404,22 @@ animation-timing-function: ease-in;
   }
 }
 
+@keyframes orbit-disappear-close {
+  from {
+    -webkit-transform: translate(-128%, 38%) scale(2);
+    visibility:visible;
+  }
+ 50% {
+   -webkit-transform:translate(-88%, -35%) scale(2);
+    visibility:hidden;
+  }
+ to {
+   -webkit-transform:translate(-128%, 38%) scale(2);
+    visibility:hidden;
+  }
+
+}
+
 @keyframes orbit {
   from {
     -webkit-transform:translate(0px, 0px);
@@ -360,6 +430,21 @@ animation-timing-function: ease-in;
     visibility:visible;
   }
  to {
+    visibility:visible;
+  }
+}
+
+@keyframes orbit-close {
+  from {
+    -webkit-transform:translate(-128%, 38%) scale(2);
+    visibility:visible;
+  }
+ 50% {
+   -webkit-transform:translate(-88%, -35%) scale(2);
+    visibility:visible;
+  }
+ to {
+   -webkit-transform:translate(-128%, 38%) scale(2);
     visibility:visible;
   }
 }
